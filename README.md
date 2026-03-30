@@ -57,10 +57,10 @@ We implemented:
 
 moi_vault/
 ├── logic/
-│    └── vault.coco
+│   └── vault.coco
 ├── scripts/
-│    ├── app.js
-│    └── rpc.js
+│   ├── app.js
+│   └── rpc.js
 ├── frontend/
 ├── vault.manifest.json
 └── README.md
