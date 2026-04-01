@@ -1,0 +1,46 @@
+// Personal Data Vault Logic for MOI
+
+logic Vault {
+
+  // Participant state
+  state {
+    skills: list<string>;
+    certificates: list<string>;
+    reputation: number;
+    permissions: map<string, list<string>>;
+  }
+
+  // Initialize participant vault
+  function init() {
+    self.skills = [];
+    self.certificates = [];
+    self.reputation = 0;
+    self.permissions = {};
+  }
+
+  // Add a skill
+  function addSkill(skill: string) {
+    self.skills.push(skill);
+  }
+
+  // Add a certificate
+  function addCertificate(cert: string) {
+    self.certificates.push(cert);
+  }
+
+  // Grant access to another participant
+  function grantAccess(user: string, fields: list<string>) {
+    self.permissions[user] = fields;
+  }
+
+  // View data based on permissions
+  function viewData(owner: string) {
+
+    let allowed = participant(owner).permissions[self.address];
+
+    return {
+      skills: allowed.includes("skills") ? participant(owner).skills : [],
+      certificates: allowed.includes("certificates") ? participant(owner).certificates : []
+    };
+  }
+}

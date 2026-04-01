@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section {
+  background: #1e293b;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 8px 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0ea5e9;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.recruiter {
+  background: #020617;
+  border: 1px solid #38bdf8;
+  padding: 15px;
+  border-radius: 10px;
+}

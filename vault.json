@@ -1,0 +1,6 @@
+{
+  "name": "Vault",
+  "version": "1.0",
+  "description": "Personal Data Vault",
+  "logic": "logic/vault.coco"
+}

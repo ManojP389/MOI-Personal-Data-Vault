@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "logics": [
+    {
+      "name": "Vault",
+      "code": "logic Vault { state { skills: list<string>; certificates: list<string>; permissions: map<string, list<string>>; } function init() { self.skills = []; self.certificates = []; self.permissions = {}; } function addSkill(skill: string) { self.skills.push(skill); } function addCertificate(cert: string) { self.certificates.push(cert); } function grantAccess(user: string, fields: list<string>) { self.permissions[user] = fields; } }"
+    }
+  ]
+}
