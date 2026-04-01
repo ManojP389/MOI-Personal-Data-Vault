@@ -53,7 +53,7 @@ We implemented:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 moi_vault/
