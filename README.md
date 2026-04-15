@@ -110,6 +110,8 @@ moi_vault/
 ├── vault.manifest.json
 └── README.md
 
+```
+
 ### Deployment Notes
 Cocolang logic implemented in vault.coco
 Deployment attempted using Voyage Explorer
