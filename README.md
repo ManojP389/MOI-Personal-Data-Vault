@@ -98,7 +98,7 @@ npm install
 ### 3. Run Application
 npm start
 
-
+```
 ### Project Structure
 moi_vault/
 ├── logic/
