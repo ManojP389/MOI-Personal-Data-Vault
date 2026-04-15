@@ -1,136 +1,132 @@
-# MOI Personal Data Vault
+# MOI Personal Data Vault  
+Participant-Centric Identity Management System
 
-## Overview
+---
 
+## Project Overview  
 MOI Personal Data Vault is a participant-centric application that enables users to own, manage, and selectively share their personal data such as skills and certifications.
 
 Unlike traditional systems where platforms control user data, this project demonstrates how MOI’s participant-centric architecture allows users to fully control their own state and interactions.
 
 ---
 
-## Problem Statement
+## Problem Statement  
 
-* User data is controlled by centralized platforms such as LinkedIn and resumes
-* No fine-grained control over what information is shared
-* Data can be manipulated or misrepresented
-* Users do not truly own their digital identity
+Current platforms like LinkedIn and resumes suffer from:
 
----
-
-## Solution
-
-We built a Personal Data Vault where:
-
-* Each user stores their own data (skills, certificates)
-* Users control what data to share
-* Only selected data is visible to others (for example, recruiters)
+- Centralized control over user data  
+- No fine-grained control over data sharing  
+- Risk of data manipulation or misrepresentation  
+- Lack of true digital ownership  
 
 ---
 
-## Features
+## Approach  
 
-* Add skills
-* Add certificates
-* Selective data sharing
-* Restricted recruiter view
-* Clean user interface
+We developed a Personal Data Vault where:
 
----
-
-## How MOI is Used
-
-This project is based on MOI’s participant-centric state model:
-
-* Data is owned by the participant (user)
-* State is not stored in a central contract
-* Interactions update user-specific state
-* Permissions control data visibility
-
-We implemented:
-
-* Cocolang logic (`vault.coco`) to define participant state and interactions
-* A working frontend prototype to simulate participant-centric behavior
+- Each user maintains their own data vault (state)  
+- Users can add skills and certifications  
+- Users control what data is shared  
+- Recruiters can only view selected/shared data  
 
 ---
 
-## Project Structure
+## How Participant-Centric State is Used  
 
-```
+This project uses MOI’s participant-centric state model:
+
+- Each participant owns their individual state  
+- No centralized database or contract stores user data  
+- State updates happen per participant through interactions  
+- Access permissions control data visibility  
+
+### Implementation Details
+
+- **Cocolang Logic (`vault.coco`)**  
+  Defines participant state, permissions, and interactions  
+
+- **Frontend (React.js)**  
+  Interface for managing data and sharing controls  
+
+- **Backend / Scripts**  
+  Node.js (`app.js`, `rpc.js`) used for MOI Devnet RPC interaction  
+
+---
+
+## Architecture  
+
+### Traditional System
+User → Server → Database  
+
+### MOI-Based System
+User → Own State (Vault) → Controlled Sharing → Recruiter View  
+
+---
+
+## Features  
+
+- Add skills  
+- Add certificates  
+- Selective data sharing  
+- Restricted recruiter view  
+- User-controlled data ownership  
+
+---
+
+## Demo Flow  
+
+1. Add a skill (e.g., Blockchain)  
+2. Add a certificate (e.g., AWS Certified)  
+3. Select what data to share  
+4. Generate share view  
+5. Recruiter sees only selected data  
+
+---
+
+
+---
+
+## Setup and Run Instructions  
+
+### 1. Clone Repository 
+git clone <your-repo-link>
+cd moi_vault
+### 2.Install Dependencies
+cd frontend
+npm install
+### 3. Run Application
+npm start
+
+
+### Project Structure
 moi_vault/
 ├── logic/
-├── vault.coco
+│   └── vault.coco
 ├── scripts/
 │   ├── app.js
 │   └── rpc.js
 ├── frontend/
 ├── vault.manifest.json
 └── README.md
-```
 
----
+### Deployment Notes
+Cocolang logic implemented in vault.coco
+Deployment attempted using Voyage Explorer
+Full deployment via manifest/UI not completed due to tooling limitations
+RPC-based interaction tested using MOI Devnet
 
-## How to Run the Project
+### TechStack
+React.js
+Node.js
+Cocolang (MOI logic)
+MOI Devnet RPC
 
-### 1. Clone the repository
+### Future Improvements
+Integration with official MOI SDK
+Certificate verification system
+Reputation scoring
+Full deployment support
 
-git clone <your-repo-link>
-cd moi_vault
-
-### 2. Run frontend
-
-cd frontend
-npm install
-npm start
-
-Open http://localhost:3000 in your browser.
-
----
-
-## Demo Flow
-
-1. Add a skill (e.g., Blockchain)
-2. Add a certificate (e.g., AWS Certified)
-3. Select what to share
-4. Generate share
-5. View recruiter output
-
-Only selected data is visible.
-
----
-
-## Deployment Notes
-
-* Cocolang logic was implemented in `vault.coco`
-* Deployment was attempted using Voyage Explorer
-* Due to current tooling limitations, full deployment via UI/manifest was not successful
-* RPC-based interaction was explored using MOI devnet
-
----
-
-## Tech Stack
-
-* React.js
-* Node.js
-* Cocolang (MOI logic)
-* MOI Devnet RPC
-
----
-
-## Team
-
-Manoj Kumar P.
-
----
-
-## Future Improvements
-
-* Real deployment using official MOI tooling
-* Integration with MOI SDK
-* Verification system (trusted issuers)
-* Reputation scoring
-
----
-
-## Conclusion
-
-This project demonstrates how participant-centric architecture can enable true data ownership, secure sharing, and identity-aware interactions in decentralized applications.
+### Team
+P.Manoj Kumar
